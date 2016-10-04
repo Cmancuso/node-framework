@@ -46,7 +46,7 @@ function showUserInfo(event) {
 
     // Retrieve username from link rel attribute
     var thisUserName = $(this).attr('rel');
-    req.session.user = thisUserName;
+    // req.session.user = thisUserName;
     // Get Index of object based on id value
     var arrayPosition = userListData.map(function(arrayItem) { return arrayItem.username; }).indexOf(thisUserName);
 

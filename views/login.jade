@@ -1,4 +1,37 @@
-extends layout
 block content
-	include header.jade
-	
+	#myModal2.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type='button', data-dismiss='modal') ×
+					h3(ng-hide='newUser') Signup Up/Log In
+				.modal-body
+					ul#tabContent.nav.nav-tabs
+						li.active
+							a(href='#login', data-toggle='tab') Log In 
+						li
+							a(href='#signup', data-toggle='tab') Sign Up
+					.tab-content
+						#login.tab-pane.active
+							form(action='/login', method='post')
+								.form-group
+									label(for='email', name='email') Email:
+									input#usr.form-control(type='text')
+								.form-group
+									label(for='password',name='password') Password:
+									input#pwd.form-control(type='password')
+								.modal-footer
+									button.btn.btn-primary(type="submit", data-dismiss="modal") Log In
+						#signup.tab-pane
+							form(action='/signup', method='post')
+								.form-group
+									label(for='usr') Email:
+									input#usr.form-control(type='text')
+								.form-group
+									label(for='pwd') Password:
+									input#pwd.form-control(type='password')
+								.form-group
+									label(for='pwd') Confirm Password:
+									input#pwd-conf.form-control(type='password')
+								.modal-footer
+									button.btn.btn-primary(type="submit", data-dismiss="modal") Sign Up

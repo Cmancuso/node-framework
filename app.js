@@ -20,19 +20,19 @@ var users = require('./routes/users');
 
 var app = express();
 
-// require("jsdom").env("", function(err, window) {
-//     if (err) {
-//         console.error(err);
-//         return;
-//     }
+var configDB = require('./config/database.js');
+// configuration ===============================================================
+mongoose.connect(configDB.url); // connect to our database
 
-//     var $ = require("jquery")(window);
-// });
+require('./config/passport')(passport); // pass passport for configuration
+// routes ======================================================================
+require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passpo
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(morgan('dev')); // log every request to the console
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -48,6 +48,7 @@ app.use(function(req,res,next){
 });
 
 
+
 app.use(session({
   cookieName: 'session',
   secret: 'oXfY71GnFmu95AbmNCCdUt2Tz6MvEM4IMkpxfLZB3Q1EIQ9ozeBgK5ZE8UckKro',
@@ -59,6 +60,7 @@ app.use(session({
 
 app.use('/', routes);
 app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

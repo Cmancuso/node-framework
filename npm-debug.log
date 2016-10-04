@@ -7,7 +7,7 @@
 6 silly lifecycle nodetest2b@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle nodetest2b@0.0.0~start: nodetest2b@0.0.0
 8 verbose lifecycle nodetest2b@0.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle nodetest2b@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/chrismancuso/Documents/workspace/nodetest2/node_modules/.bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+9 verbose lifecycle nodetest2b@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/chrismancuso/Documents/workspace/nodetest2/node_modules/.bin:/usr/local/bin:/Users/chrismancuso/gems/ruby-2.2.1/bin:/Users/chrismancuso/gems/ruby-2.2.1@global/bin:/Users/chrismancuso/rubies/ruby-2.2.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/Users/chrismancuso/bin
 10 verbose lifecycle nodetest2b@0.0.0~start: CWD: /Users/chrismancuso/Documents/workspace/nodetest2
 11 silly lifecycle nodetest2b@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
 12 silly lifecycle nodetest2b@0.0.0~start: Returned: code: 1  signal: null

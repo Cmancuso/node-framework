@@ -1,26 +1,7 @@
 extends layout
 
 block content
-    #myModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="myModalLabel", aria-hidden="true")
-        .modal-dialog
-            .modal-content
-                .modal-header
-                    button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
-                    h4.modal-title Login
-                        | class="text-center"
-                .modal-body
-                    #addUser
-                        fieldset
-                            .form-group
-                                label(for='usr') Email:
-                                input#usr.form-control(type='text')
-                            .form-group
-                                label(for='pwd') Password:
-                                input#pwd.form-control(type='password')
-                    // /ADD USER
-                .modal-footer
-                    button.btn.btn-default(type="button", data-dismiss="modal") Close
-                    button.btn.btn-primary(type="button", data-dismiss="modal") Save Changes
+    include login.jade
 
     // Wrapper
     #wrapper
